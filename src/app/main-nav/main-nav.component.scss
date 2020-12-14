@@ -1,0 +1,28 @@
+.sidenav-container {
+  height: 100%;
+  width: 100%;
+  margin: 0%;
+  padding: 0%;
+}
+
+.sidenav {
+  width: 240px;
+  background-color:#347deb;
+  color: white;
+  margin-right: 0%;
+  background: #292929 0% 0% no-repeat padding-box;
+  opacity: 1;
+}
+
+.sidenav .mat-toolbar {
+  background: relative;
+}
+
+.mat-list-base .mat-list-item{
+  color: white;
+}
+
+.mat-list-base .mat-list-item:hover{
+  background: red 0% 0% no-repeat padding-box;
+}
+

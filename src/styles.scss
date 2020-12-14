@@ -1,0 +1,21 @@
+@import "../node_modules/bootstrap/dist/css/bootstrap.css";
+@import '~@angular/material/theming';
+@include mat-core();
+
+$angular-material-primary: mat-palette($mat-blue);
+$angular-material-accent: mat-palette($mat-pink, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$angular-material-warn: mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$angular-material-theme: mat-light-theme($angular-material-primary, $angular-material-accent, $angular-material-warn);
+
+@include angular-material-theme($angular-material-theme);
+
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%;width: 100%;}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+

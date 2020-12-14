@@ -1,0 +1,16 @@
+<table>
+  <tr style="width: 100%;">
+    <td style="width: 100%;" class="mr-5px">
+      <div style="height: 70vh;width: 90%;" leaflet [leafletOptions]="options" (leafletMapReady)="onMapReady($event)"
+        [leafletLayersControl]="layersControl">
+      </div>
+    </td>
+    <td style="vertical-align: top;" class="ml-2">
+      <div>
+        <select [(ngModel)]="currentImei" (change)=" onImeiChange()">
+          <option *ngFor="let imei of imeis" [value]="imei">{{imei}}</option>
+        </select>
+      </div>
+    </td>
+  </tr>
+</table>

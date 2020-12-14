@@ -1,0 +1,22 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport="false"
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="(isHandset$ | async) === false">
+    <mat-toolbar style="background: #292929 0% 0% no-repeat padding-box;opacity: 1;color: white;">
+      Leaflet-Map
+    </mat-toolbar>
+    <mat-nav-list class="navbar-nav">
+      <a mat-list-item href="/marker">Marker</a>
+      <a mat-list-item href="/polyline">Polyline</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar style="height: 8%;background: #292929 0% 0% no-repeat padding-box;opacity:1;color: white;">
+          <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
+            <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+          </button>
+    </mat-toolbar>
+      <ng-content></ng-content>
+      <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
